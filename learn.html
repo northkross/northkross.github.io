@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSCI 256 Final Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="planning.html">Planning</a></li>
+            <li><a href="more.html">More</a></li>       
+        </ul>
+    </nav>
+     <h2>Notation</h2>
+    <p>The following notation is used to describe moves on a Rubik's Cube:</p>
+    <p>Note: The apostrophe (') also called prime, indicates a counterclockwise rotation, and the number 2 indicates a 180-degree rotation.</p>
+    <ul class="notation">
+        <li><strong>F</strong> - Front face clockwise</li>
+        <li><strong>B</strong> - Back face clockwise</li>
+        <li><strong>L</strong> - Left face clockwise</li>
+        <li><strong>R</strong> - Right face clockwise</li>
+        <li><strong>U</strong> - Upper face clockwise</li>
+        <li><strong>D</strong> - Lower face clockwise</li>
+        <li><strong>F'</strong> - Front face counterclockwise</li>
+        <li><strong>B'</strong> - Back face counterclockwise</li>
+        <li><strong>L'</strong> - Left face counterclockwise</li>
+        <li><strong>R'</strong> - Right face counterclockwise</li>
+        <li><strong>U'</strong> - Upper face counterclockwise</li>
+        <li><strong>D'</strong> - Lower face counterclockwise</li>
+        <li><strong>F2</strong> - Front face 180 degrees</li>
+        <li><strong>B2</strong> - Back face 180 degrees</li>
+        <li><strong>L2</strong> - Left face 180 degrees</li>
+        <li><strong>R2</strong> - Right face 180 degrees</li>
+        <li><strong>U2</strong> - Upper face 180 degrees</li>
+        <li><strong>D2</strong> - Lower face 180 degrees</li>
+        <li><strong>x</strong> - Rotate the entire cube on the x-axis</li>
+        <li><strong>y</strong> - Rotate the entire cube on the y-axis</li>
+        <li><strong>z</strong> - Rotate the entire cube on the z-axis</li>
+        <li><strong>M</strong> - Middle slice (between L and R)</li>
+        <li><strong>E</strong> - Equatorial slice (between U and D)</li>
+        <li><strong>S</strong> - Standing slice (between F and B)</li>
+    
+    </ul>
+    <h2>Steps to Solve a Rubik's Cube</h2>
+    <p><strong>For Beginners(Beginner Method):</strong></p>
+    <ol>
+        <li>Learn the basic notation and moves.</li>
+        <li>Master the white cross.</li>
+            <p>Place all the white edge pieces in a cross pattern with the red secondary color opposite to orange and blue opposite to green; have all the secondary colors match up to their center piece</p>
+        <li>Solve the white corners.</li>
+            <p>Place all the white corner pieces above the spot they belong in and one at a time use this algorithm up to six times: R, U, R', U'</p>
+        <li>Complete the second layer.</li>
+            <p>For second layer edge pieces; ie no white or yellow stickers, line up an edge piece color with the correct color center piece and depending on which way it needs to go use the following algorithms: For edges that need to go to the left: U', L', U, L, U, F, U', F'. For edges that need to go to the right: U, R, U', R', U', F', U, F.</p>
+        <li>Form the yellow cross.</li>
+            <p>Depending on the pattern of yellow pieces on the top face, use the following algorithm: For a dot pattern: F, R, U, R', U', F'. For an L shape(position the L in the top left corner of the cube): F, U, R, U', R', F'. For a line(long ways; from left to right): F, R, U, R', U', F'.</p>
+        <li>Position the yellow corners.</li>
+            <p>Use the following algorithm until all the yellow corners are in the correct position: U, R, U', L', U, R', U', L.</p>
+        <li>Orient the final layer.</li>
+            <p>Use the following algorithm one at a time, turning the U layer after each iteration until all the yellow pieces are facing up: R', D', R, D.</p>
+    </ol>
+    <p><strong>For Advanced Cubers(CFOP Method):</strong></p>
+    <ol>
+        <li>Cross: Solve the cross on the first layer.</li>
+        	<p>Similar to the beginner method, but with more efficient algorithms and lookahead techniques to minimize cube rotations and improve speed.</p>
+        <li>F2L (First Two Layers).</li>
+            <p>Pair up the corner and edge pieces of the first two layers simultaneously, using intuitive or algorithmic methods to insert them into their correct positions; not much to learn here just practice and figure stuff out on your own</p>
+        <li>OLL (Orientation of the Last Layer) algorithms.</li>
+            <p>Learn the 57 algorithms to orient all the pieces of the last layer correctly, regardless of their position.</p>
+            <a href="https://www.cubeskills.com/uploads/pdf/tutorials/oll-algorithms.pdf" target="_blank" class="Method">OLL Algorithms</a>
+        <li>PLL (Permutation of the Last Layer) techniques.</li>
+            <p>Learn the 21 algorithms to permute the pieces of the last layer, placing them in their correct positions while maintaining their orientation.</p>
+            <a href="https://www.cubeskills.com/uploads/pdf/tutorials/pll-algorithms.pdf" target="_blank" class="Method">PLL Algorithms</a>
+    </ol>
+    <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
+        <button class="options" id="options" onclick="darkmode()">D</button>
+</body>

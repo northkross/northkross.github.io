@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSCI 256 Final Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="planning.html">Planning</a></li>
+            <li><a href="more.html">More</a></li>       
+        </ul>
+    </nav>
+       <h2>Practice and Benchmark</h2>
+    <div class="timer-wrap">
+        <div class="timer">
+            <h3 class="randomscramble" id="randomscramble"></h3>
+            <h1>Practice Timer</h1>
+            <p id="timer">00:00.00</p>
+            <button id="startStopBtn" onclick="startAndStop()">Start</button>
+            <button id="resetBtn" onclick="resetTimer()">Reset</button>
+            <button id="newScrambleBtn" onclick="randomscramble()">New Scramble</button>
+        </div>
+    </div>
+
+    <p>Use the practice timer to time your solves and track your progress. Click "Start" to begin timing, and "Stop" to end the timer. You can reset the timer at any time to start fresh. Regular practice with the timer will help you improve your solving speed and consistency.</p>
+    <h2>---------------------------------------------</h2>
+    <div class="timer-wrap">
+        <div class="benchmark">
+            <h3 class="randombenchmarkscramble" id="randombenchmarkscramble"></h3>
+            <h1>Benchmark Timer</h1>
+            <p id="benchmarkTimer">00:00.00</p>
+            <button id="startBenchmarkBtn" onclick="startBenchmark()">Start</button>
+            <button id="resetBenchmarkBtn" onclick="resetBenchmark()">Reset</button>
+            <button id="newScrambleBtn" onclick="randombenchmarkscramble()">New Scramble</button>
+        </div>
+    </div>
+    <p>The benchmark is a different form of practice aimed at your ability to form muscle memory when reading scrambles and algorithms. Start the timer and do the scramble. When you complete it, stop the timer and record your time. Doing this daily will make your learning process with advanced methods faster and make scrambling cubes faster as well. It will also help beginners learn cube notation quickly.</p>
+    <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
+        <button class="options" id="options" onclick="darkmode()">D</button>
+</body>
