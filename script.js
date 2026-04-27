@@ -92,13 +92,20 @@ function randombenchmarkscramble() {
     scrambleElement.innerHTML = scramble2;
 }
 function toggle() {
-    const option = getElementById("options");
-    const navtoggle = getElementbyId("menu-toggle");
-    option.style.display = "block"
-    navtoggle.style.display = "none"
+    const menu = document.getElementById("menu-items");
+    menu.classList.toggle("active");
 }
 
 function darkmode() {
-    const nav = document.getElementById("main-nav");
-    nav.style.backgroundColor = "darkgrey"
+    const isDark = document.body.classList.toggle("dark-mode");
+
+    localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
 }
+
+window.onload = function () {
+    const savedMode = localStorage.getItem("darkMode");
+
+    if (savedMode === "enabled") {
+        document.body.classList.add("dark-mode");
+    }
+};
