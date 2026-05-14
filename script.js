@@ -164,6 +164,11 @@ function darkmode() {
 
     localStorage.setItem("darkMode", isDark ? "enabled" : "disabled");
 }
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+    }
+});
 
 window.onload = function () {
     const savedMode = localStorage.getItem("darkMode");
