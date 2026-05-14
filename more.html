@@ -8,21 +8,57 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="practice.html">Practice</a></li>
-            <li><a href="planning.html">Planning</a></li>
-            <li><a href="more.html">More</a></li>       
-        </ul>
-    </nav>
-    <p>This is the More page for this website.</p>
+    <nav class="main-nav active">
+    <div class="nav-left">
+        <h3 class="nav-title">The Art of Speedcubing</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="practice.php">Practice</a></li>
+        <li><a href="planning.html">Planning</a></li>
+        <li><a href="more.html">More</a></li>
+    </ul>
+</nav>
+    <div id="tocPanel">
+        <strong>Sections</strong>
+        <ul id="tocList"></ul>
+    </div>
+    <p>If you're using this website you have or will have gotten a fair bit of knowledge on speedcubing, however there are a near infinite amount of things to explore and learn about this fascinating hobby. Let's briefly explain some other things here.</p>
+    <h1>Other Methods</h1>
+    <p>There are lots of other methods beyond the ones previously mentioned, each with their own unique approaches and advantages. Some of these include the Waterman method, the Petrus method, and the ZB method.</p>
+    <p>The Waterman method is a popular method that focuses on solving the cube in layers, similar to the beginner method, but with more efficient algorithms and techniques. The Petrus method is a block-building method that emphasizes building blocks of pieces rather than solving layer by layer. The ZB method is a more advanced method and very similar to the CFOP method, focusing on solving the cube using fewer moves and more efficient algorithms however it is much harder to master having hundred of algorithms to learn but can get much faster times.</p>
+    <h1>Other Puzzles</h1>
+    <p>While the Rubik's Cube is the most popular twisty puzzle, there are many other puzzles to explore in the world of speedcubing. Here's a list of WCA recognized puzzles</p>
+    <ul>
+        <li>2x2x2 Cube</li>
+        <li>3x3x3 Cube</li>
+        <li>4x4x4 Cube</li>
+        <li>5x5x5 Cube</li>
+        <li>6x6x6 Cube</li>
+        <li>7x7x7 Cube</li>
+        <li>3x3x3 One-Handed</li>
+        <li>3x3x3 Blindfolded</li>
+        <li>3x3x3 Fewest Moves</li>
+        <li>Megaminx</li>
+        <li>Pyraminx</li>
+        <li>Square-1</li>
+        <li>Skewb</li>
+        <li>Clock</li>
+        <li>4x4x4 Blindfolded</li>
+        <li>5x5x5 Blindfolded</li>
+        <li>3x3x3 Multi-Blind</li>
+    </ul>
+    <p>Each of these puzzles has its own unique solving methods and techniques, providing endless opportunities for cubers to challenge themselves and improve their skills. Whether you're interested in mastering the classic 3x3x3 cube or exploring more complex puzzles, there's a wide variety of options to choose from in the world of speedcubing.</p>
+    <a href="https://www.speedcubeshop.com" target="_blank" id="container2">Visit the Speedcubeshop</a>
     <div class="bottom-menu">
         <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
         <div class="menu-items" id="menu-items">
             <button class="options" id="options" onclick="darkmode()">D</button>
+            <button class="options" id="options" onclick="nav_toggle()">Nav</button>
         </div>
+        <button class="options" id="scrollTopBtn" onclick="scrolltotop()">↑</button>
     </div>
 </body>

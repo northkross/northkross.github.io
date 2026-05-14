@@ -8,21 +8,47 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="practice.html">Practice</a></li>
-            <li><a href="planning.html">Planning</a></li>
-            <li><a href="more.html">More</a></li>       
-        </ul>
-    </nav>
-    <p>This is the Planning page for this website.</p>
+    <nav class="main-nav active">
+    <div class="nav-left">
+        <h3 class="nav-title">The Art of Speedcubing</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="planning.html">Planning</a></li>
+        <li><a href="more.html">More</a></li>
+    </ul>
+</nav>
+    <div id="tocPanel">
+        <strong>Sections</strong>
+        <ul id="tocList"></ul>
+    </div>
+    <div id="container2" style="padding: 1rem; margin: 1rem;">Welcome to the Planning page! Here you can plan your speedcubing goals and figure out the correct next steps in your journey.</div>
+    <h1>Accessories</h1>
+    <p>As you progress in your speedcubing journey, you may want to consider investing in some accessories to enhance your cubing experience. Some popular accessories include lubricants, timers, and cube stands.</p>
+    <p>Lubricants can help improve the performance of your cube by reducing friction and making it easier to turn. There are many different types of lubricants available, including silicone-based and water-based options. It's important to choose the right lubricant for your cube and to apply it correctly to avoid damaging your cube.</p>
+    <p>Timers are essential for tracking your progress and improving your times. There are many different types of timers available, including physical timers and smartphone apps. It's important to choose a timer that is accurate and easy to use, and to make sure you are timing your solves consistently to track your progress effectively.</p>
+    <p>Cube stands are a great way to display your cube and keep it organized. They can also help protect your cube from damage and make it easier to access when you want to practice. There are many different types of cube stands available, including wall-mounted options and tabletop stands.</p>
+    <h1>Tournaments</h1>
+    <p>Feel comfortable solving the cube? Consider participating in local tournaments to challenge yourself and improve your skills! They are typically pretty cheap to enter and offer a great opportunity to meet other speedcubers. They happen regularly in many cities and though beginner's will likely get no wehre close to winning, there may be no better way to improve. Don't be discouraged when you see the level of competition and know that every single last one of them started in your position.</p>
+    <a href="https://www.worldcubeassociation.org/competitions" target="_blank" id="container2">Find A Tournament Near You!</a>
+    <h1>Tips</h1>
+    <h2>Here are some tips to help you on your speedcubing journey:</h2>
+    <ul>Make sure you always time your solves, you never know when one will be your record.</ul>
+    <ul>Don't be afraid to learn new methods and techniques, they can help you improve your times.</ul>
+    <ul>Practice regularly, even just a few minutes a day can make a big difference.</ul>
+    <ul>Join online communities and forums to connect with other speedcubers and learn from their experiences.</ul>
+    <ul>Have fun and enjoy the process of learning and improving!</ul>
+    
     <div class="bottom-menu">
         <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
         <div class="menu-items" id="menu-items">
             <button class="options" id="options" onclick="darkmode()">D</button>
+            <button class="options" id="options" onclick="nav_toggle()">Nav</button>
         </div>
+        <button class="options" id="scrollTopBtn" onclick="scrolltotop()">↑</button>
     </div>
 </body>

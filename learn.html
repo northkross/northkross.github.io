@@ -8,19 +8,27 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="practice.html">Practice</a></li>
-            <li><a href="planning.html">Planning</a></li>
-            <li><a href="more.html">More</a></li>       
-        </ul>
-    </nav>
-     <h2>Notation</h2>
-    <p>The following notation is used to describe moves on a Rubik's Cube:</p>
-    <p>Note: The apostrophe (') also called prime, indicates a counterclockwise rotation, and the number 2 indicates a 180-degree rotation.</p>
+    <nav class="main-nav active">
+    <div class="nav-left">
+        <h3 class="nav-title">The Art of Speedcubing</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="practice.php">Practice</a></li>
+        <li><a href="planning.html">Planning</a></li>
+        <li><a href="more.html">More</a></li>
+    </ul>
+</nav>
+    <div id="tocPanel">
+        <strong>Sections</strong>
+        <ul id="tocList"></ul>
+    </div>
+    <h1>Notation</h1>
+    <p id="container2">The following notation is used to describe moves on a Rubik's Cube:</p>
+    <p id="container2">Note: The apostrophe (') also called prime, indicates a counterclockwise rotation, and the number 2 indicates a 180-degree rotation.</p>
     <ul class="notation">
         <li><strong>F</strong> - Front face clockwise</li>
         <li><strong>B</strong> - Back face clockwise</li>
@@ -48,8 +56,8 @@
         <li><strong>S</strong> - Standing slice (between F and B)</li>
     
     </ul>
-    <h2>Steps to Solve a Rubik's Cube</h2>
-    <p><strong>For Beginners(Beginner Method):</strong></p>
+    <h1>Steps to Solve a Rubik's Cube</h1>
+    <p id="container2"><strong>For Beginners(Beginner Method):</strong></p>
     <ol>
         <li>Learn the basic notation and moves.</li>
         <li>Master the white cross.</li>
@@ -65,7 +73,7 @@
         <li>Orient the final layer.</li>
             <p>Use the following algorithm one at a time, turning the U layer after each iteration until all the yellow pieces are facing up: R', D', R, D.</p>
     </ol>
-    <p><strong>For Advanced Cubers(CFOP Method):</strong></p>
+    <p id="container2"><strong>For Advanced Cubers(CFOP Method):</strong></p>
     <ol>
         <li>Cross: Solve the cross on the first layer.</li>
         	<p>Similar to the beginner method, but with more efficient algorithms and lookahead techniques to minimize cube rotations and improve speed.</p>
@@ -82,6 +90,8 @@
         <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
         <div class="menu-items" id="menu-items">
             <button class="options" id="options" onclick="darkmode()">D</button>
+            <button class="options" id="options" onclick="nav_toggle()">Nav</button>
         </div>
+        <button class="options" id="scrollTopBtn" onclick="scrolltotop()">↑</button>
     </div>
 </body>

@@ -8,44 +8,56 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">  
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <h3>The Art of Speedcubing</h3>
-            <li><a href="practice.html">Practice</a></li>
-            <li><a href="planning.html">Planning</a></li>
-            <li><a href="more.html">More</a></li>       
-        </ul>
-    </nav>
-    <p>View the rest of the pages and level up your abilities!</p>
+<nav class="main-nav active">
+    <div class="nav-left">
+        <h3 class="nav-title">The Art of Speedcubing</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="practice.php">Practice</a></li>
+        <li><a href="planning.html">Planning</a></li>
+        <li><a href="more.html">More</a></li>
+    </ul>
+</nav>
+    <div id="tocPanel">
+        <strong>Sections</strong>
+        <ul id="tocList"></ul>
+    </div>
+    <h1>Welcome to the Art of Speedcubing!</h1>
+    <div class="container2" id="container2" style="margin-top: 2rem">
+        <h2>View the rest of the pages and level up your abilities!</h2>
+    </div>
     <div class="containers" id="containers">
         <div class="page-info">
             <p>Learn all about speedcubing and its history!</p>
-            <a class="container" id="container" href="about.html">About</a>
+            <a class="container1" id="container1" href="about.html">About</a>
         </div>
         <div class="page-info">
             <p>Learn how to solve your first cube or learn more advanced ways!</p>
-            <a class="container" id="container" href="learn.html">Learn</a>
+            <a class="container1" id="container1" href="learn.html">Learn</a>
         </div>
         <div class="page-info">
             <p>Practice your abilities with timers and tests!</p>
-            <a class="container" id="container" href="practice.html">Practice</a>
+            <a class="container1" id="container1" href="practice.html">Practice</a>
         </div>
         <div class="page-info">
             <p>Plan your next steps on your journey!</p>
-            <a class="container" id="container" href="planning.html">Planning</a>
+            <a class="container1" id="container1" href="planning.html">Planning</a>
         </div>
         <div class="page-info">
             <p>Want more? Go here!</p>
-            <a class="container" id="container" href="more.html">More</a>
+            <a class="container1" id="container1" href="more.html">More</a>
         </div>
     </div>
     <div class="bottom-menu">
         <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
         <div class="menu-items" id="menu-items">
             <button class="options" id="options" onclick="darkmode()">D</button>
+            <button class="options" id="options" onclick="nav_toggle()">Nav</button>
         </div>
+        <button class="options" id="scrollTopBtn" onclick="scrolltotop()">↑</button>
     </div>
 </html>

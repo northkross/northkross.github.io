@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if (!isset($_SESSION["solves"])) {
+    $_SESSION["solves"] = [];
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["time"])) {
+    $time = floatval($_POST["time"]);
+    if ($time > 0) {
+        $_SESSION["solves"][] = $time;
+    }
+}
+
+if (isset($_GET["clear"])) {
+    $_SESSION["solves"] = [];
+    header("Location: practice.php");
+    exit;
+}
+
+function avg($arr) {
+    return count($arr) ? array_sum($arr) / count($arr) : 0;
+}
+
+$solves = $_SESSION["solves"];
+$best = $solves ? min($solves) : 0;
+$worst = $solves ? max($solves) : 0;
+$mean = avg($solves);
+
+$ao5 = count($solves) >= 5 ? avg(array_slice($solves, -5)) : 0;
+$ao12 = count($solves) >= 12 ? avg(array_slice($solves, -12)) : 0;
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,7 +79,7 @@
             <a href="practice.php?clear=1">Clear All</a>
 
             <h2>Statistics</h2>
-            <ul>
+            <ul class="stats">
                 <li><strong>Best:</strong> <?= number_format($best, 2) ?>s</li>
                 <li><strong>Worst:</strong> <?= number_format($worst, 2) ?>s</li>
                 <li><strong>Mean:</strong> <?= number_format($mean, 2) ?>s</li>
@@ -57,7 +88,7 @@
             </ul>
 
             <h2>All Solves</h2>
-            <ol>
+            <ol class="solves">
                 <?php foreach ($solves as $s): ?>
                 <li><?= number_format($s, 2) ?>s</li>
                 <?php endforeach; ?>

@@ -8,24 +8,47 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <nav class="main-nav">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="learn.html">Learn</a></li>
-            <li><a href="practice.html">Practice</a></li>
-            <li><a href="planning.html">Planning</a></li>
-            <li><a href="more.html">More</a></li>       
-        </ul>
-    </nav>
-    <h2>Welcome to the art of soeedcubing</h2>
+    <nav class="main-nav active">
+    <div class="nav-left">
+        <h3 class="nav-title">The Art of Speedcubing</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="practice.php">Practice</a></li>
+        <li><a href="planning.html">Planning</a></li>
+        <li><a href="more.html">More</a></li>
+    </ul>
+</nav>
+    <div id="tocPanel">
+        <strong>Sections</strong>
+        <ul id="tocList"></ul>
+    </div>
+    <h1>Welcome to the art of speedcubing!</h1>
     <p>Welcome to the art of speedcubing! This website is dedicated to the fascinating world of speedcubing, solve the Rubik's Cube and other twisty puzzles as quickly as possible. Whether you're a beginner looking to learn the basics or an experienced cuber seeking advanced techniques, you'll find valuable resources, tutorials, and tips to enhance your cubing skills. Explore our collection of algorithms, practice exercises, and training resources. Get ready to twist, turn, and improve your speedcubing abilities!</p>
-    <h2>About Speedcubing</h2>
-    <p>Speedcubing is the practice of solving a Rubik's Cube as quickly as possible. It has evolved into a competitive sport with world records being broken regularly. Enthusiasts around the globe participate in competitions, sharing techniques and pushing the boundaries of human dexterity and memory.</p>
+    <h1>WCA</h1>
+    <p>The World Cube Association (WCA) is the international governing body for competitive speedcubing. It organizes and regulates official competitions around the world, sets the rules and standards for solving puzzles, and maintains a database of records and rankings. The WCA promotes fair play, encourages community engagement, and fosters the growth of speedcubing as a sport. Whether you're interested in participating in competitions or simply want to connect with other cubers, the WCA provides a platform for cubers of all levels to come together and celebrate their passion for speedcubing.</p>
+    <a href="https://www.worldcubeassociation.org/" target="_blank" id="container2">Visit the WCA Website!</a>
+    <h1>About Speedcubing</h1>
+    <p>Speedcubing is the practice of solving a Rubik's Cube as quickly as possible. It has evolved into a competitive sport with world records being broken regularly. Enthusiasts around the globe participate in competitions, sharing techniques and pushing the boundaries of human dexterity and memory. The current world record single is 2.76 seconds by Teodor Zajder set in early 2026 and the world record average is Xuanyi Geng at 3.84 seconds also set in early 2026.</p>
+    <h1>Methods</h1>
+    <p>There are many different methods for speedcubing, each with their own unique approach and set of algorithms. Some popular methods include the Beginner's Method, CFOP method, Roux method, and ZZ method. Here's a description of each of the methods</p>
+    <h1>Beginner's Method</h1>
+    <p>The Beginner's Method is a simple approach to solving the Rubik's Cube, ideal for those just starting out. It involves solving the cube layer by layer, making it easy to learn but not the fastest method.</p>
+    <h1>CFOP Method</h1>
+    <p>The CFOP method, also known as the Fridrich method, is a popular speedcubing method that focuses on solving the cube in four steps: Cross, F2L (First Two Layers), OLL (Orientation of the Last Layer), and PLL (Permutation of the Last Layer). It is widely used by competitive cubers due to its efficiency and speed.</p>
+    <h1>Roux Method</h1>
+    <p>The Roux method is a speedcubing approach that involves building two 1x2x3 blocks on opposite sides of the cube, followed by solving the remaining pieces. It is known for its intuitive nature and reduced number of moves.</p>
+    <h1>ZZ Method</h1>
+    <p>The ZZ method is a speedcubing technique that starts with orienting all edges on the U and D faces, then proceeds to solve the cube using a combination of block-building and intuitive solving techniques.</p>
     <div class="bottom-menu">
         <button class="menu-toggle" id="menu-toggle" onclick="toggle()">></button>
         <div class="menu-items" id="menu-items">
             <button class="options" id="options" onclick="darkmode()">D</button>
+            <button class="options" id="options" onclick="nav_toggle()">Nav</button>
         </div>
+         <button class="options" id="scrollTopBtn" onclick="scrolltotop()">↑</button>
     </div>
 </body>
