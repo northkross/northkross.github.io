@@ -229,8 +229,67 @@ function submitSolve(timeString) {
     const [minSec, ms] = timeString.split(".");
     const [min, sec] = minSec.split(":");
 
-    const totalSeconds = (parseInt(min) * 60) + parseInt(sec) + (parseInt(ms) / 100);
+    const totalSeconds =
+        (parseInt(min) * 60) +
+        parseInt(sec) +
+        (parseInt(ms) / 100);
 
-    document.getElementById("timeInput").value = totalSeconds.toFixed(2);
-    document.getElementById("solveForm").submit();
+    addSolve(totalSeconds);
 }
+
+
+let solves = JSON.parse(localStorage.getItem("solves")) || [];
+
+function saveSolves() {
+    localStorage.setItem("solves", JSON.stringify(solves));
+}
+
+function addSolve(seconds) {
+    solves.push(seconds);
+    saveSolves();
+    updateStats();
+    updateSolveList();
+}
+
+function clearSolves() {
+    solves = [];
+    saveSolves();
+    updateStats();
+    updateSolveList();
+}
+
+function average(arr) {
+    if (arr.length === 0) return 0;
+    return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+
+function updateStats() {
+    const best = solves.length ? Math.min(...solves) : 0;
+    const worst = solves.length ? Math.max(...solves) : 0;
+    const mean = average(solves);
+
+    const ao5 = solves.length >= 5 ? average(solves.slice(-5)) : 0;
+    const ao12 = solves.length >= 12 ? average(solves.slice(-12)) : 0;
+
+    document.getElementById("best").textContent = best.toFixed(2);
+    document.getElementById("worst").textContent = worst.toFixed(2);
+    document.getElementById("mean").textContent = mean.toFixed(2);
+    document.getElementById("ao5").textContent = ao5.toFixed(2);
+    document.getElementById("ao12").textContent = ao12.toFixed(2);
+}
+
+function updateSolveList() {
+    const list = document.getElementById("solveList");
+    list.innerHTML = "";
+
+    solves.forEach((s, i) => {
+        const li = document.createElement("li");
+        li.textContent = `${(i + 1)}. ${s.toFixed(2)}s`;
+        list.appendChild(li);
+    });
+}
+
+window.onload = () => {
+    updateStats();
+    updateSolveList();
+};
